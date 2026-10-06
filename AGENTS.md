@@ -20,5 +20,5 @@ Org **root** GitHub Pages site (legacy branch deploy). Static HTML only. Live: <
 
 ## Cross-repo knowledge
 
-- The Jupyter Book lives in `hcmus-cs-ta/lab-book` (MyST/JB2, includes the private `intro-ds` submodule) — see its `README.md` and `AGENTS.md` for build/deploy/auth.
+- The Jupyter Book lives in `hcmus-cs-ta/lab-book` (MyST/JB2; repo **private**, its Pages site public by design). It includes two private submodules — `intro-ds` and `programming/problemset` — fetched in CI by the unified `STATEMENTS_TOKEN` secret. See its `README.md` and `AGENTS.md` for build/deploy/auth.
 - Statement content is owned by `hcmus-cs-ta/intro-ds` (private; canonical tex sources + converter CI). Never copy or fork statement pages into this repo — link to them.
