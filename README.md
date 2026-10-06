@@ -11,7 +11,7 @@ This is the **org root site**: the repository name matches `hcmus-cs-ta.github.i
 
 ## Current content
 
-- `index.html` — landing page: one card per course site with deep links into its key pages (currently the Lab Book card: overview + three milestone statements; the book's live Programming chapter — coding conventions — is not yet linked from the card).
+- `index.html` — landing page: one card per course site with deep links into its key pages (currently the Lab Book card: overview + three milestone statements; the book's live Programming chapter — coding conventions — is not yet linked from the card; and the FAI — AI Arena card: overview link only, no deep links).
 
 ## Adding a new course site (extensibility)
 

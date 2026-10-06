@@ -10,7 +10,7 @@ Sibling trackers (each repo manages its own):
 
 | Component | Role | Status |
 |---|---|---|
-| `index.html` | landing page: "Jupyter Book — Lab Book" card → `/lab-book/`, plus deep links (statement overview + three milestone pages) | live (`7cb9d61`) |
+| `index.html` | landing page: "Jupyter Book — Lab Book" card → `/lab-book/`, plus deep links (statement overview + three milestone pages); "FAI — AI Arena" card → `/lab-book/arena/statement/` (overview link only, no deep links by design) | live (`7cb9d61`) |
 | `README.md` | org-root role, legacy push=deploy model, `index.html` vs README precedence, recipe for adding course sites | shipped (`bac3945`) |
 | `AGENTS.md` | publish invariants, dependency-free rule, no-secrets rule, link conventions | shipped (`bac3945`) |
 
