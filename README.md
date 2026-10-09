@@ -11,17 +11,18 @@ This is the **org root site**: the repository name matches `hcmus-cs-ta.github.i
 
 ## Current content
 
-The site is a strict two-layer router:
+The site is the **front door of the Lab Book** — one card per course; the card deep-links to the course's main *page inside the book* (`/lab-book/...`):
 
-- `index.html` — **landing**: one card per **course**, nothing deeper. Currently one card: *Introduction to Data Science* → `/intro-ds/`.
-- `intro-ds/index.html` — **course hub**: one card per course **section**. Currently: *Project* → `/lab-book/intro-ds/statement/` (the statements overview in the Lab Book). Future sections (Labs, Slides, ...) become sibling cards here.
+- *Introduction to Data Science* → `/lab-book/intro-ds/` (course home; from there: the arXiv project overview → three milestone pages)
+- *Programming* → `/lab-book/programming/problemset/` (course home)
+- *AI Arena* → `/lab-book/arena/statement/` (statements overview)
 
-Deep page links (milestones, statements) live **only at the third layer** — inside the book itself; the landing and hubs never link below section level.
+Course main pages live **only inside the book** (owned by the course repos, bound in `lab-book/myst.yml`); the old `/intro-ds/` HTML hub was deleted on 2026-10-09. This repo stays a single-layer router.
 
-## Adding a new course site (extensibility)
+## Adding a new course (extensibility)
 
-1. The course content lives in its own repo (e.g. `hcmus-cs-ta/<course-book>`) with its own Pages deployment — a *project* site served at `https://hcmus-cs-ta.github.io/<repo-name>/`, which means its build must set `BASE_URL=/<repo-name>` (see `lab-book/deploy.yml` as the reference implementation).
-2. Add a **course card** to `index.html` linking to `/<course>/` — never to the book directly and never with deep links.
-3. Create `/<course>/index.html` — the course hub — with one card per section; section cards may link into the book's content.
+1. The course content lives in its own repo (e.g. `hcmus-cs-ta/<course-repo>`) and is bound into `hcmus-cs-ta/lab-book` as a private submodule; the build sets `BASE_URL=/<repo-name>` (see `lab-book/deploy.yml` as the reference implementation).
+2. Give the course a **main page** inside the book (first child of its `myst.yml` toc group; `intro-ds/index.md` is the reference pattern).
+3. Add a **course card** to `index.html` here linking to that course page — never deeper.
 4. Keep the HTML plain: inline styles, system fonts, zero external scripts. Pages must stay build-free and fast.
-5. If a linked book changes its URL structure (toc/folders options), update the affected hub links here in the same commit discipline.
+5. If the book changes its URL structure (toc/`folders` options), update the affected links here in the same commit discipline.

@@ -4,25 +4,24 @@ Living tracker for THIS repo only: the org root site at <https://hcmus-cs-ta.git
 
 Sibling trackers (each repo manages its own):
 - `hcmus-cs-ta/lab-book` → `wip.md` (multi-course Jupyter Book: build/deploy)
-- `hcmus-cs-ta/intro-ds` → `wip.md` (arXiv project statement content)
-- `hcmus-cs-ta/hcmus-programming-exercise` → `wip.md` (programming problems + Regulations content)
+- `hcmus-cs-ta/intro-ds` → `wip.md` (arXiv project statement content + IntroDS course page)
+- `hcmus-cs-ta/hcmus-programming-exercise` → `wip.md` (programming course page + Regulations content)
 - `hcmus-cs-ta/hcmus-ai-arena` → `wip.md` (AI Arena statements)
 
 ## Components
 
 | Component | Role | Status |
 |---|---|---|
-| `index.html` | **landing — course cards only**. One card: *Introduction to Data Science* → `/intro-ds/`. (The flat Lab Book card and the FAI — AI Arena card were removed in the hierarchy restructure, by decision 2026-10-06.) | live |
-| `intro-ds/index.html` | **course hub** — section cards. One card: *Project* → `/lab-book/intro-ds/statement/` (statements overview). Future sections (Labs, Slides, ...) become sibling cards. | live |
-| `README.md` | org-root role, legacy push=deploy model, two-layer router description, course-site recipe | shipped |
-| `AGENTS.md` | publish invariants, hierarchy invariants, path-safety note, link conventions | shipped |
+| `index.html` | **landing — course front door**: three cards deep-linking to each course's main page in the Lab Book — *IntroDS* → `/lab-book/intro-ds/`, *Programming* → `/lab-book/programming/problemset/`, *AI Arena* → `/lab-book/arena/statement/`; muted "all materials live in the lab book" note | live |
+| `README.md` | org-root role, legacy push=deploy model, single-layer router description, course recipe | shipped (2026-10-09) |
+| `AGENTS.md` | publish invariants, rebuilt hierarchy (course pages live in the book; no HTML hubs), link conventions, course-card registry | shipped (2026-10-09) |
 
 ## Publishing facts
 
 - Legacy branch deploy: push to `main` publishes in ~1 minute; no CI. `index.html` takes precedence over the README render.
-- Hierarchy: landing (courses) → hub (sections) → book pages (deep links only inside the book).
-- `/intro-ds/` hub path is safe: the private intro-ds repo cannot enable its own Pages on the org's free plan.
+- Navigation chain: landing (here) → book dashboard (`/lab-book/`, card per course) → course main page (in the book, owned by the course repo) → course materials (IntroDS: project overview → three milestone pages).
+- The old `/intro-ds/index.html` hub was deleted (decision 2026-10-09, no redirect): course main pages live only inside the book.
 
 ## Pending
 
-- (none) Standing watch: if `lab-book` changes its URL scheme (toc/`folders` option), update the hub links here in lockstep — a stale link is a broken front door.
+- (none) Standing watch: if `lab-book` changes its URL scheme (toc/`folders` option), update the landing card links here in lockstep — a stale link is a broken front door.
