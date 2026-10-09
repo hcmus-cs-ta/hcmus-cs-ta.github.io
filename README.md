@@ -16,6 +16,7 @@ The site is the **front door of the Lab Book** — one card per course; the card
 - *Introduction to Data Science* → `/lab-book/intro-ds/` (course home; from there: the arXiv project overview → three milestone pages)
 - *Programming* → `/lab-book/programming/problemset/` (course home)
 - *AI Arena* → `/lab-book/arena/statement/` (statements overview)
+- *Introduction to Information Technology* → `/lab-book/introit/` (course home; from there: the course project description)
 
 Course main pages live **only inside the book** (owned by the course repos, bound in `lab-book/myst.yml`); the old `/intro-ds/` HTML hub was deleted on 2026-10-09. This repo stays a single-layer router.
 
