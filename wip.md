@@ -13,7 +13,7 @@ Sibling trackers (each repo manages its own):
 
 | Component | Role | Status |
 |---|---|---|
-| `index.html` | **landing — course front door**: four cards deep-linking to each course's main page in the Lab Book — *IntroDS* → `/lab-book/intro-ds/`, *Programming* → `/lab-book/programming/problemset/`, *AI Arena* → `/lab-book/arena/statement/`, *IntroIT* → `/lab-book/introit/` (copy humanized 2026-10 with the statement's editorial pass); muted "all materials live in the lab book" note | live |
+| `index.html` | **landing — course front door**: four cards deep-linking to each course's main page in the Course Lab Book — *Introduction to Data Science* → `/lab-book/intro-ds/`, *Programming Courses* → `/lab-book/programming/problemset/`, *Fundamentals of Artificial Intelligence* → `/lab-book/arena/statement/`, *Introduction to Information Technology* → `/lab-book/introit/` (card names carried the full course names in the 2026-10-10 rename); muted "all materials live in the Course Lab Book" note | live |
 | `README.md` | org-root role, legacy push=deploy model, single-layer router description, course recipe | shipped (2026-10-09) |
 | `AGENTS.md` | publish invariants, rebuilt hierarchy (course pages live in the book; no HTML hubs), link conventions, course-card registry | shipped (2026-10-09) |
 

@@ -11,11 +11,11 @@ This is the **org root site**: the repository name matches `hcmus-cs-ta.github.i
 
 ## Current content
 
-The site is the **front door of the Lab Book** — one card per course; the card deep-links to the course's main *page inside the book* (`/lab-book/...`):
+The site is the **front door of the Course Lab Book** — one card per course, labeled with the full course name; the card deep-links to the course's main *page inside the book* (`/lab-book/...`):
 
 - *Introduction to Data Science* → `/lab-book/intro-ds/` (course home; from there: the arXiv project overview → three milestone pages)
-- *Programming* → `/lab-book/programming/problemset/` (course home)
-- *AI Arena* → `/lab-book/arena/statement/` (statements overview)
+- *Programming Courses* → `/lab-book/programming/problemset/` (course home)
+- *Fundamentals of Artificial Intelligence* → `/lab-book/arena/statement/` (statements overview)
 - *Introduction to Information Technology* → `/lab-book/introit/` (course home; from there: the course project description)
 
 Course main pages live **only inside the book** (owned by the course repos, bound in `lab-book/myst.yml`); the old `/intro-ds/` HTML hub was deleted on 2026-10-09. This repo stays a single-layer router.
