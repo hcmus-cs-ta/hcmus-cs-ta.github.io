@@ -8,12 +8,13 @@ Sibling trackers (each repo manages its own):
 - `hcmus-cs-ta/hcmus-programming-exercise` → `wip.md` (programming course page + Regulations content)
 - `hcmus-cs-ta/hcmus-ai-arena` → `wip.md` (AI Arena statements)
 - `hcmus-cs-ta/hcmus-intro-it` → `wip.md` (IntroIT course page + project-statement transcription)
+- `hcmus-cs-ta/hcmus-data-mining` → `wip.md` (Data Mining course page + exercise handouts + project statements)
 
 ## Components
 
 | Component | Role | Status |
 |---|---|---|
-| `index.html` | **landing — course front door**: four cards deep-linking to each course's main page in the Course Lab Book — *Introduction to Data Science* → `/lab-book/intro-ds/`, *Programming Courses* → `/lab-book/programming/problemset/`, *Fundamentals of Artificial Intelligence* → `/lab-book/arena/statement/`, *Introduction to Information Technology* → `/lab-book/introit/` (card names carried the full course names in the 2026-10-10 rename; the IntroIT copy swept to the 2026-10 verbal style rule — no dashes, parentheses, double quotes or semicolons); muted "all materials live in the Course Lab Book" note | live |
+| `index.html` | **landing — course front door**: five cards deep-linking to each course's main page in the Course Lab Book — *Introduction to Data Science* → `/lab-book/intro-ds/`, *Programming Courses* → `/lab-book/programming/problemset/`, *Fundamentals of Artificial Intelligence* → `/lab-book/arena/statement/`, *Introduction to Information Technology* → `/lab-book/introit/`, *Data Mining and Applications* → `/lab-book/data-mining/` (card names carry the full course names in the 2026-10-10 rename, fifth card added 2026-10-12; the IntroIT copy swept to the 2026-10 verbal style rule — no dashes, parentheses, double quotes or semicolons); muted "all materials live in the Course Lab Book" note | live |
 | `README.md` | org-root role, legacy push=deploy model, single-layer router description, course recipe | shipped (2026-10-09) |
 | `AGENTS.md` | publish invariants, rebuilt hierarchy (course pages live in the book; no HTML hubs), link conventions, course-card registry | shipped (2026-10-09) |
 

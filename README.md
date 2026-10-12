@@ -17,6 +17,7 @@ The site is the **front door of the Course Lab Book** — one card per course, l
 - *Programming Courses* → `/lab-book/programming/problemset/` (course home)
 - *Fundamentals of Artificial Intelligence* → `/lab-book/arena/statement/` (statements overview)
 - *Introduction to Information Technology* → `/lab-book/introit/` (course home; from there: the course project description)
+- *Data Mining and Applications* → `/lab-book/data-mining/` (course home; from there: the practice exercises and the three term-project statements)
 
 Course main pages live **only inside the book** (owned by the course repos, bound in `lab-book/myst.yml`); the old `/intro-ds/` HTML hub was deleted on 2026-10-09. This repo stays a single-layer router.
 
