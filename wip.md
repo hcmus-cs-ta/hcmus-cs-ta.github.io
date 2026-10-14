@@ -15,8 +15,20 @@ Sibling trackers (each repo manages its own):
 | Component | Role | Status |
 |---|---|---|
 | `index.html` | **landing — course front door**: five cards deep-linking to each course's main page in the Course Lab Book — *Introduction to Data Science* → `/lab-book/intro-ds/`, *Programming Courses* → `/lab-book/programming/problemset/`, *Fundamentals of Artificial Intelligence* → `/lab-book/arena/statement/`, *Introduction to Information Technology* → `/lab-book/introit/`, *Data Mining and Applications* → `/lab-book/data-mining/` (card names carry the full course names in the 2026-10-10 rename, fifth card added 2026-10-12; the IntroIT copy swept to the 2026-10 verbal style rule — no dashes, parentheses, double quotes or semicolons); muted "all materials live in the Course Lab Book" note | live |
-| `README.md` | org-root role, legacy push=deploy model, single-layer router description, course recipe | shipped (2026-10-09) |
-| `AGENTS.md` | publish invariants, rebuilt hierarchy (course pages live in the book; no HTML hubs), link conventions, course-card registry | shipped (2026-10-09) |
+| `README.md` | org-root role, legacy push=deploy model, single-layer router description, course recipe (card list deduped into the AGENTS registry 2026-10-14) | renovated (2026-10-14) |
+| `AGENTS.md` | publish invariants, rebuilt hierarchy (course pages live in the book; no HTML hubs), link conventions, course-card registry, cross-repo knowledge pointed at the lab-book canon | renovated (2026-10-14) |
+
+## Docs-architecture round (2026-10-14)
+
+Org principle applied (README = human overview, AGENTS = agent contract, wip =
+tracker; duplicated facts owned by the most generic place): the README's
+enumerated card list collapsed into a pointer at the `AGENTS.md` card registry
+(invariant 7 stays the single card list); the `AGENTS.md` cross-repo section
+dropped the restated submodule/auth facts in favor of pointers at the lab-book
+`AGENTS.md`/`README.md`, which own all book-side truth since the normative
+docs-architecture contract landed there (book commit `34f42fd`). Same round
+renovated all five course repos' docs to the principle. Site content itself
+unchanged.
 
 ## Publishing facts
 

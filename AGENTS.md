@@ -21,6 +21,16 @@ Org **root** GitHub Pages site (legacy branch deploy). Static HTML only. Live: <
 
 ## Cross-repo knowledge
 
-- The Jupyter Book lives in `hcmus-cs-ta/lab-book` (MyST/JB2; repo **private**, its Pages site public by design). It includes five private submodules — `intro-ds`, `programming/problemset`, `arena`, `introit` and `data-mining` — fetched in CI by the unified `STATEMENTS_TOKEN` secret. See its `README.md` and `AGENTS.md` for build/deploy/auth.
-- Statement content is owned by `hcmus-cs-ta/intro-ds` (private; canonical tex sources + converter CI; also owns the IntroDS course page `intro-ds/index.md`), `hcmus-cs-ta/hcmus-programming-exercise` (private; Programming course page + Regulations), `hcmus-cs-ta/hcmus-ai-arena` (private; AI Arena statements, hand-transcribed from versioned statement PDFs), `hcmus-cs-ta/hcmus-intro-it` (private; IntroIT course page + course-project description, hand-transcribed from the versioned statement PDF), and `hcmus-cs-ta/hcmus-data-mining` (private; Data Mining course page + practice-exercise handouts + project statements, transcribed and renovated from versioned statement PDFs). Never copy or fork course/book content into this repo — link to it.
-- The navigation chain: landing (here) → book dashboard (`/lab-book/`) → course main page → course materials (IntroDS: project overview → three milestone pages; IntroIT: course project description; IntroIT exercises; Data Mining: practice exercises → three project statements).
+- The Jupyter Book `hcmus-cs-ta/lab-book` (repo **private**, its Pages site
+  public by design) holds **all book-side truth**: the submodule list, the
+  build/deploy/auth pattern (including the `STATEMENTS_TOKEN` PAT), the MyST
+  quirks and the normative docs-architecture contract. That knowledge is owned
+  by the lab-book's `README.md`/`AGENTS.md` — this repo points at it, never
+  restates it.
+- Statement content lives in the course repos bound as submodules
+  (`hcmus-cs-ta/intro-ds`, `hcmus-programming-exercise`, `hcmus-ai-arena`,
+  `hcmus-intro-it`, `hcmus-data-mining`); each repo's root `AGENTS.md` is its
+  contract. Never copy or fork course/book content into this repo — link to it.
+- The navigation chain (landing → book dashboard → course main page → course
+  materials) is tracked in the lab-book `README.md`; the landing-accountability
+  rule for stale links is invariant 6 above.
